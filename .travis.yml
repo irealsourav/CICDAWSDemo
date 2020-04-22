@@ -6,4 +6,4 @@ before_install:
   - docker build -t irealsourav/cicdawsdemo -f Dockerfile.dev .
 
 scripts:
-  - docker run irealsourav/cicdawsdemo npm run test -- --coverage
+  - docker run -it irealsourav/cicdawsdemo npm run test -- --coverage
