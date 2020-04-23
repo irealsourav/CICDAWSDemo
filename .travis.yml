@@ -7,3 +7,6 @@ before_install:
 
 scripts:
   - docker run irealsourav/cicdawsdemo npm run test -- --coverage
+
+after_sucess:
+  - travis_terminate 0
