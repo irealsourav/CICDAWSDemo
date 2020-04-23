@@ -6,7 +6,4 @@ before_install:
   - docker build -t irealsourav/cicdawsdemo -f Dockerfile.dev .
 
 scripts:
-  - docker run irealsourav/cicdawsdemo npm run test -- --coverage
-
-after_sucess:
-  - travis_terminate 0
+  - docker run -e CI=true irealsourav/cicdawsdemo npm run test -- --coverage
