@@ -7,3 +7,16 @@ before_install:
 
 scripts:
   - docker run -e CI=true irealsourav/cicdawsdemo npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "CICDAWSDemo"
+  env: "Cicdawsdemo-env"
+  bucket_name: "elasticbeanstalk-us-east-2-688713631091"
+  bucket_path: "CICDAWSDemo"
+  on:
+    branch: master
+  access_key_id: $AWS_Access_Key
+  secret_access_key: 
+    secure: "$AWS_Secret_Key"
