@@ -11,8 +11,8 @@ scripts:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "CICDAWSDemo"
-  env: "Cicdawsdemo-env"
+  app: "DockerWithTravisCICD"
+  env: "Dockerwithtraviscicd-env"
   bucket_name: "elasticbeanstalk-us-east-2-688713631091"
   access_key_id: 
     secure: "$AWS_ACCESS_KEY"
