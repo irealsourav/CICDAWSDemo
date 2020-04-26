@@ -14,8 +14,6 @@ deploy:
   app: "CICDAWSDemo"
   env: "Cicdawsdemo-env"
   bucket_name: "elasticbeanstalk-us-east-2-688713631091"
-  on:
-    branch: master
   access_key_id: 
     secure: "$AWS_ACCESS_KEY"
   secret_access_key: 
