@@ -15,6 +15,6 @@ deploy:
   env: "Dockerwithtraviscicd-env"
   bucket_name: "elasticbeanstalk-us-east-2-688713631091"
   access_key_id: 
-    secure: "AKIAIUMBX2GQFYR6IALA"
+    secure: $AWS_ACCESS_KEY
   secret_access_key: 
-    secure: "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"
+    secure: $AWS_SECRET_KEY
