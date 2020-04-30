@@ -2,9 +2,12 @@ sudo: required
 services:
   - docker
 
-scripts:
+before_install:
   - docker build -t irealsourav/cicdawsdemo -f Dockerfile.dev .
-before_deploy: "echo $AWS_ACCESS_KEY+$AWS_SECRET_KEY"
+
+scripts:
+  - docker run -e CI=true irealsourav/cicdawsdemo npm run test -- --coverage
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
