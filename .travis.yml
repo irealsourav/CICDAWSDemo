@@ -5,9 +5,6 @@ services:
 before_install:
   - docker build -t irealsourav/cicdawsdemo -f Dockerfile.dev .
 
-scripts:
-  - docker run -e CI=true irealsourav/cicdawsdemo npm run test -- --coverage
-
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
