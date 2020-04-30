@@ -4,6 +4,7 @@ services:
 
 scripts:
   - docker build -t irealsourav/cicdawsdemo -f Dockerfile.dev .
+  - echo "$AWS_ACCESS_KEY"+"$AWS_SECRET_KEY"
 
 deploy:
   provider: elasticbeanstalk
