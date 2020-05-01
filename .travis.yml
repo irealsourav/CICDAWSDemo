@@ -9,6 +9,7 @@ scripts:
   - docker run -e CI=true irealsourav/cicdawsdemo npm run test -- --coverage
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "DockerWithTravisCICD"
